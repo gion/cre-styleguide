@@ -1,0 +1,34 @@
+temp
+.eslintcache
+.docz
+
+# Mac.
+.DS_Store
+*.DS_Store
+
+# Test Artifacts
+.coverage
+.nyc_output
+coverage.xml
+nosetests.xml
+test-artifacts
+
+# Node.js.
+node_modules
+docker_node_modules
+*.log
+
+# Built code
+dist
+tmp
+build
+
+# local config that should always be ignored
+src/config/localOverrides.yml
+
+# IDE's
+.idea/
+.vscode/
+
+# vim
+*.swp
