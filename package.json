@@ -1,65 +1,65 @@
 {
-  "name": "cre-styleguide",
-  "version": "0.0.1",
+	"name": "cre-styleguide",
+	"version": "0.0.1",
 	"description": "This is a new shared library of react components",
-  "main": "dist/index.js",
-  "scripts": {
+	"main": "dist/index.js",
+	"scripts": {
 		"test": "npm run test:format && npm run test:lint",
-    "test:lint": "eslint 'src/**/*.js*' && eslint 'test/**/*.js*' && stylelint 'src/**/*.scss'",
-    "test:format": "prettier --list-different '{src,test}/**/*.{js,jsx}' '*.{js,json}'",
-    "format": "prettier --write '{src,test}/**/*.{js,jsx}' '*.{js,json}'",
-    "clean": "rm -rf node_modules && rm -rf dist && yarn cache clean",
-    "build": "webpack --mode production",
-    "storybook": "start-storybook -p 3000 -c .storybook",
-    "docz:dev": "docz dev",
-    "docz:build": "docz build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@git.ten-x.io:7999/con/cre-styleguide.git"
-  },
-  "author": "Gion",
-  "license": "MIT",
-  "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
+		"test:lint": "eslint 'src/**/*.js*'",
+		"test:format": "prettier --list-different '{src,test}/**/*.{js,jsx}' '*.{js,json}'",
+		"format": "prettier --write '{src,test}/**/*.{js,jsx}' '*.{js,json}'",
+		"clean": "rm -rf node_modules && rm -rf dist && yarn cache clean",
+		"build": "webpack --mode production",
+		"storybook": "start-storybook -p 3000 -c .storybook",
+		"docz:dev": "docz dev",
+		"docz:build": "docz build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "ssh://git@git.ten-x.io:7999/con/cre-styleguide.git"
+	},
+	"author": "Gion",
+	"license": "MIT",
+	"devDependencies": {
+		"@babel/core": "^7.2.2",
+		"@babel/preset-env": "^7.2.3",
 		"@babel/preset-react": "^7.0.0",
-    "@ten-x/eslint-config-tenx": "0.0.1",
-    "@ten-x/eslint-config-tenx-react": "0.0.4",
-    "@ten-x/stylelint-config-tenx": "^0.2.0",
-    "@storybook/addon-actions": "^5.2.3",
-    "@storybook/react": "^5.2.3",
-    "@tulipjs/eslint-config": "^1.1.1",
-    "babel-loader": "^8.0.1",
-    "css-loader": "^1.0.0",
-    "docz": "^1.2.0",
+		"@storybook/addon-actions": "^5.2.3",
+		"@storybook/react": "^5.2.3",
+		"@ten-x/stylelint-config-tenx": "^0.2.0",
+		"@tulipjs/eslint-config": "^1.1.1",
+		"babel-loader": "^8.0.1",
+		"css-loader": "^1.0.0",
+		"docz": "^1.2.0",
 		"docz-theme-default": "^1.2.0",
+		"eslint": "^6.5.1",
+		"eslint-plugin-react": "^7.16.0",
 		"husky": "^3.0.8",
 		"lint-staged": "^9.4.2",
 		"node-sass": "^4.9.3",
-    "prettier": "^1.18.2",
+		"prettier": "^1.18.2",
 		"sass-loader": "^7.1.0",
+		"style-loader": "^0.23.1",
 		"stylelint": "^11.0.0",
-    "style-loader": "^0.23.1",
-    "url-loader": "^1.1.2",
-    "webpack": "^4.28.3",
-    "webpack-cli": "^3.2.0"
-  },
-  "dependencies": {
-    "@emotion/core": "^10.0.21",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "styled-components": "^4.2.1"
+		"url-loader": "^1.1.2",
+		"webpack": "^4.28.3",
+		"webpack-cli": "^3.2.0"
+	},
+	"dependencies": {
+		"@emotion/core": "^10.0.21",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
+		"styled-components": "^4.2.1"
 	},
 	"husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn test"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,json}": [
-      "prettier --write"
-    ]
-  }
+		"hooks": {
+			"pre-commit": "lint-staged",
+			"pre-push": "yarn test"
+		}
+	},
+	"lint-staged": {
+		"*.{js,jsx,json}": [
+			"prettier --write"
+		]
+	}
 }
