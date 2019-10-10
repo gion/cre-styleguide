@@ -22,8 +22,8 @@ module.exports = async ({ config }) => {
 	})
 
 	config.module.rules[0].use[0].options.plugins = [
-    require.resolve('babel-plugin-react-docgen'),
-  ]
+		require.resolve('babel-plugin-react-docgen'),
+	]
 
 	return config
 }
