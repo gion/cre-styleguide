@@ -14,7 +14,14 @@ module.exports = {
 				test: /\.less$/,
 				use: [
 					{ loader: 'style-loader' },
-					{ loader: 'css-loader' },
+					{
+						loader: 'css-loader',
+						options: {
+							modules: true,
+							importLoaders: 1,
+							localIdentName: '[path][name]__[local]--[hash:base64:5]',
+						},
+					},
 					{
 						loader: 'less-loader',
 						options: {
@@ -27,7 +34,14 @@ module.exports = {
 				test: /\.scss$/,
 				use: [
 					{ loader: 'style-loader' },
-					{ loader: 'css-loader' },
+					{
+						loader: 'css-loader',
+						options: {
+							modules: true,
+							importLoaders: 1,
+							localIdentName: '[path][name]__[local]--[hash:base64:5]',
+						},
+					},
 					{ loader: 'sass-loader' },
 				],
 			},
